@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restly", "Restly\Restly.csproj", "{3A8457E9-5989-40ED-815E-29438240331E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A8457E9-5989-40ED-815E-29438240331E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8457E9-5989-40ED-815E-29438240331E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8457E9-5989-40ED-815E-29438240331E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3A8457E9-5989-40ED-815E-29438240331E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8457E9-5989-40ED-815E-29438240331E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8457E9-5989-40ED-815E-29438240331E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD952389-AF05-4AD4-B211-5F5AAC70BA0B}
+	EndGlobalSection
+EndGlobal
