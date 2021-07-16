@@ -9,7 +9,7 @@
 <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:weightSum="6"
+        android:weightSum="7"
         android:layout_marginTop="8dp"
         android:layout_height="30dp">
 
@@ -18,20 +18,20 @@
              android:layout_height="26dp"
             android:gravity="left"
             android:textSize="17dp"
-            android:text="aaa"
+            android:text="dressing"
             android:textColor="@color/darkBlack"
-            android:layout_weight="5"
+            android:layout_weight="6"
             android:id="@+id/product_options_title"/>
-
             <TextView
-             android:layout_width="25dp"
+             android:layout_width="wrap_content"
              android:layout_height="26dp"
-            android:layout_weight="0.8"
+            android:layout_weight="1"
             android:gravity="center"
             android:textSize="14dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
-            android:layout_marginRight="2dp"
+            android:text="Optional"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textColor="@color/lightBlack"
             android:background="@drawable/options_background"      
             android:id="@+id/product_options_optional"/>

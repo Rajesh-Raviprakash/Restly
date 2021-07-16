@@ -19,7 +19,7 @@
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -83,6 +83,8 @@
     <Compile Include="Services\HttpWebService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\montserrat_extra_light.ttf" />
+    <AndroidAsset Include="Assets\montserrat_regular.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml">
       <SubType>Designer</SubType>
@@ -280,6 +282,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\font\montserrat.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
