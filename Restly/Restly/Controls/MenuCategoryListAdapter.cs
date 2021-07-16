@@ -79,6 +79,8 @@ namespace Restly
                     ovh.categoryCardview.SetCardBackgroundColor(Color.White);
                 }
 
+            ovh.categoryTitle.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+
         }
             public void OnClick(View itemView, int position, bool isLongClick, CardView categoryCardview, TextView categoryTitle)
             {

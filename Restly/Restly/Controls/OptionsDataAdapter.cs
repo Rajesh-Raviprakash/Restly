@@ -1,4 +1,5 @@
-﻿using Android.Support.V7.Widget;
+﻿using Android.Graphics;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Restly.Activities;
@@ -64,6 +65,9 @@ namespace Restly.Controls
             {
                 ovh.extrasPrice.Visibility = ViewStates.Gone;
             }
+
+            ovh.itemName.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
+            ovh.extrasPrice.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

@@ -63,6 +63,9 @@ namespace Restly.Activities
                 ovh.suggestedItemTitle.SetTextColor(Color.White);
                 ovh.suggestedItemPrice.SetTextColor(Color.White);
             };
+
+            ovh.suggestedItemTitle.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
+            ovh.suggestedItemPrice.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
         }
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {

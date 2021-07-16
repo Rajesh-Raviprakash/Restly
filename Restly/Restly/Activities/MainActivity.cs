@@ -47,6 +47,7 @@ namespace Restly
 
         public EditText searchText;
         public Button clear;
+        public TextView menu, location;
 
         // Unique ID for our notification: 
         static readonly int NOTIFICATION_ID = 1000;
@@ -65,6 +66,7 @@ namespace Restly
         private XamarinRecyclerViewOnScrollListener onScrollListener;
         public static ProductModel productData;
         private FloatingActionButton fab;
+        public static Typeface typeface;
 
         protected override async void OnCreate(Bundle savedInstanceState)
         {
@@ -81,6 +83,8 @@ namespace Restly
             categoryRecyclerView = FindViewById<RecyclerView>(Resource.Id.categoryRecyclerView);
             menuRecyclerView = FindViewById<RecyclerView>(Resource.Id.menuRecyclerView);
             searchText = FindViewById<EditText>(Resource.Id.menu_searchbar);
+            menu = FindViewById<TextView>(Resource.Id.titleText);
+            location = FindViewById<TextView>(Resource.Id.location);
 
             //category layout manager
             var category_LayoutManager = new LinearLayoutManager(this);
@@ -98,6 +102,15 @@ namespace Restly
             //floating action button 
             fab = FindViewById<FloatingActionButton>(Resource.Id.fabButton);
 
+
+
+            typeface = Typeface.CreateFromAsset(Assets, "montserrat_regular.ttf");
+            menu.SetTypeface(typeface,TypefaceStyle.Bold);
+            location.SetTypeface(typeface, TypefaceStyle.Normal);
+
+            searchText.SetTypeface(typeface, TypefaceStyle.Normal);
+            clear.SetTypeface(typeface, TypefaceStyle.Normal);
+            
             CreateNotificationChannel();
 
             Attachments();

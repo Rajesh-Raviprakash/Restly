@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -85,6 +86,9 @@ namespace Restly.Controls
             {
                 sidesOptionSelected.Invoke(productActivity, position);
             };
+
+            ovh.itemName.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
+            ovh.optionPrice.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

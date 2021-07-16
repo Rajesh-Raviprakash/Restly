@@ -30,6 +30,7 @@ namespace Restly.Activities
         AllergenseAdapter productAllergenseAlergense;
         ImageButton plus, minus;
         Button addToCart;
+        EditText preferenceEditText;
 
         RecyclerView optionsRecyclerView,suggestionRecyclerView;
         public static int[] selectedPos;
@@ -54,6 +55,9 @@ namespace Restly.Activities
 
             ChangeButtonStates();
             preferenceTitle.Text = AppResource.SpecialPreferenceText;
+
+            preferenceTitle.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            suggestionTitle.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
         }
 
         private void Attachments()
@@ -145,9 +149,16 @@ namespace Restly.Activities
 
             quantity = FindViewById<TextView>(Resource.Id.quantity);
             addToCart = FindViewById<Button>(Resource.Id.addToCart);
+            preferenceEditText = FindViewById<EditText>(Resource.Id.preference_edittext);
+
 
             quantity.Text = itemQuantity.ToString();
 
+            quantity.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            addToCart.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            preferenceEditText.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
+
+            
         }
 
         private async void SetAdapterAsync()
@@ -157,6 +168,9 @@ namespace Restly.Activities
                 ProgressIndicator.StartAnimation(this);
                 if (productData.Success)
                 {
+                    productTitle.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+                    productPrice.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+                    productDescription.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
                     var productImageBitmap = HttpWebService.GetImageBitmapFromUrl(productData.Data.ImageUrl.ToString());
                     productTitle.Text = productData.Data.Name;
                     productPrice.Text = StringOperations.AddCurrencyText(productData.Data.Price.ToString());

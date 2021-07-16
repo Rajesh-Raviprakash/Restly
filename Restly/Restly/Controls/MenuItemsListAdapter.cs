@@ -79,6 +79,10 @@ namespace Restly
             var allergenseAdapter = new AllergenseAdapter(mainActivity, data.data[position].allergens);
             ovh.allergenseRecyclerView.SetAdapter(allergenseAdapter);
             ovh.SetItemClickListener(this);
+            ovh.itemDescription.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
+            ovh.itemName.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            ovh.itemPrice.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            ovh.itemRatings.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
         }
 
         public void OnClick(View itemView, int position, bool isLongClick, CardView categoryCardview, TextView categoryTitle)

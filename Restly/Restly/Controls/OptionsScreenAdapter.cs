@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
 using Android.Support.V7.Widget;
@@ -88,6 +89,9 @@ namespace Restly.Controls
                 var optionsAdapter = new OptionsDataAdapter(productActivity, options[position],ProductActivity.checkedOptions);
                 adapter_holder.optionScreenRecyclerView.SetAdapter(optionsAdapter);
             }
+
+            adapter_holder.title.SetTypeface(MainActivity.typeface, TypefaceStyle.Bold);
+            adapter_holder.optionalText.SetTypeface(MainActivity.typeface, TypefaceStyle.Normal);
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
